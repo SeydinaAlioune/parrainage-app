@@ -1,0 +1,13 @@
+[build]
+builder = "nixpacks"
+buildCommand = "composer install --no-dev"
+
+[deploy]
+startCommand = "php artisan migrate --force && php artisan config:cache && php artisan route:cache && php artisan view:cache && php artisan serve"
+healthcheckPath = "/"
+healthcheckTimeout = 100
+restartPolicyType = "on_failure"
+
+[database]
+type = "mysql"
+version = "8.0"

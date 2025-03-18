@@ -1,0 +1,28 @@
+{
+    "version": 2,
+    "framework": "laravel",
+    "functions": {
+        "api/*.php": {
+            "runtime": "vercel-php@0.6.0"
+        }
+    },
+    "routes": [
+        {
+            "src": "/(.*)",
+            "dest": "/api/index.php"
+        }
+    ],
+    "env": {
+        "APP_NAME": "Système de Parrainage",
+        "APP_ENV": "production",
+        "APP_DEBUG": "false",
+        "APP_URL": "https://parrainage.vercel.app",
+        "ASSET_URL": "https://parrainage.vercel.app",
+        "DB_CONNECTION": "mysql",
+        "CACHE_DRIVER": "array",
+        "LOG_CHANNEL": "stack",
+        "SESSION_DRIVER": "cookie",
+        "SESSION_LIFETIME": "120",
+        "QUEUE_CONNECTION": "sync"
+    }
+}
