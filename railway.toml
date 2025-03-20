@@ -11,6 +11,4 @@ restartPolicyType = "on_failure"
 type = "mysql"
 version = "8.0"
 
-[variables]
-FORCE_HTTPS = "true"
-ASSET_URL = "https://parrainage-app-production.up.railway.app"
+
